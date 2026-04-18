@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Commande Personnalisée – Sister's Creation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sc-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand sc-brand" href="index.html"><span class="brand-icon">✦</span> Sister's Creation</a>
+      <button class="navbar-toggler sc-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="toggler-line"></span><span class="toggler-line"></span><span class="toggler-line"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link sc-nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link sc-nav-link" href="boutique.html">Nos Délices</a></li>
+          <li class="nav-item"><a class="nav-link sc-nav-link active" href="commande.html">Sur Mesure</a></li>
+          <li class="nav-item"><a class="nav-link sc-nav-link" href="paiement.html">Paiement</a></li>
+          <li class="nav-item"><a class="nav-link sc-nav-link" href="aide.html">Aide</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container text-center">
+      <span class="section-tag reveal-up">Création unique</span>
+      <h1 class="page-title reveal-up delay-1">🎀 Commande Personnalisée</h1>
+      <p class="page-subtitle reveal-up delay-2">Décrivez votre rêve sucré, nous le réalisons.</p>
+    </div>
+  </section>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <!-- INFO SIDEBAR -->
+        <div class="col-lg-4 mb-5 mb-lg-0 reveal-up delay-1">
+          <div class="info-sidebar">
+            <div class="info-card mb-4">
+              <h4>⏱ Délais</h4>
+              <p>3 à 5 jours selon la complexité de la création.</p>
+            </div>
+            <div class="info-card mb-4">
+              <h4>💰 Tarifs</h4>
+              <p>À partir de <strong>1 500 HTG</strong> pour une création simple jusqu'à <strong>5 000+ HTG</strong> pour des pièces élaborées.</p>
+            </div>
+            <div class="info-card mb-4">
+              <h4>✅ Acompte</h4>
+              <p><strong>30%</strong> du montant total pour confirmer la commande.</p>
+            </div>
+            <div class="info-card info-card-highlight">
+              <h4>🎨 Options</h4>
+              <ul class="info-list">
+                <li>Formes variées (rond, carré, cœur…)</li>
+                <li>Saveurs : chocolat, vanille, fraise, coco…</li>
+                <li>Message personnalisé (50 car.)</li>
+                <li>Thèmes : anniversaire, mariage, baby shower…</li>
+                <li>Image comestible sur le gâteau</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div class="col-lg-8 reveal-up delay-2">
+          <div class="sc-form-container">
+            <h2 class="form-title">Remplissez votre demande</h2>
+            <p class="form-subtitle">Nous recevons tout directement sur WhatsApp 😊</p>
+
+            <!-- Progress bar -->
+            <div class="form-progress mb-4">
+              <div class="progress-step active" data-step="1"><span>1</span><small>Vous</small></div>
+              <div class="progress-line"></div>
+              <div class="progress-step" data-step="2"><span>2</span><small>Événement</small></div>
+              <div class="progress-line"></div>
+              <div class="progress-step" data-step="3"><span>3</span><small>Détails</small></div>
+            </div>
+
+            <form id="whatsapp-form" novalidate>
+
+              <!-- STEP 1 -->
+              <div class="form-step active" id="step-1">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="sc-label required">Votre nom</label>
+                    <input type="text" id="f-name" class="sc-input" placeholder="Nom complet" required>
+                    <div class="sc-invalid">Veuillez entrer votre nom.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="sc-label required">Téléphone</label>
+                    <input type="tel" id="f-phone" class="sc-input" placeholder="Ex: 37 70 49 27" required>
+                    <div class="sc-invalid">Veuillez entrer votre numéro.</div>
+                  </div>
+                </div>
+                <div class="form-nav-btns mt-4 text-end">
+                  <button type="button" class="btn sc-btn-primary" onclick="goStep(2)">Suivant →</button>
+                </div>
+              </div>
+
+              <!-- STEP 2 -->
+              <div class="form-step" id="step-2">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="sc-label required">Type d'événement</label>
+                    <select id="f-event" class="sc-input" required>
+                      <option value="">Choisissez…</option>
+                      <option value="Anniversaire 🎂">Anniversaire 🎂</option>
+                      <option value="Mariage 💒">Mariage 💒</option>
+                      <option value="Baptême 👶">Baptême 👶</option>
+                      <option value="Événement entreprise 🏢">Événement entreprise 🏢</option>
+                      <option value="Autre 🎉">Autre 🎉</option>
+                    </select>
+                    <div class="sc-invalid">Veuillez choisir un événement.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="sc-label required">Date souhaitée</label>
+                    <input type="date" id="f-date" class="sc-input" required>
+                    <div class="sc-invalid">Veuillez choisir une date.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="sc-label">Nombre de personnes</label>
+                    <input type="number" id="f-guests" class="sc-input" min="1" placeholder="Ex: 20">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="sc-label">Budget estimé (HTG)</label>
+                    <input type="number" id="f-budget" class="sc-input" placeholder="Ex: 5000">
+                  </div>
+                </div>
+                <div class="form-nav-btns mt-4 d-flex justify-content-between">
+                  <button type="button" class="btn sc-btn-outline" onclick="goStep(1)">← Retour</button>
+                  <button type="button" class="btn sc-btn-primary" onclick="goStep(3)">Suivant →</button>
+                </div>
+              </div>
+
+              <!-- STEP 3 -->
+              <div class="form-step" id="step-3">
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="sc-label required">Description de votre idée</label>
+                    <textarea id="f-idea" class="sc-input" rows="4" placeholder="Ex: Gâteau 2 étages, thème licorne, couleurs rose et or, message 'Joyeux 5 ans Emma'…" required></textarea>
+                    <div class="sc-invalid">Décrivez votre idée.</div>
+                  </div>
+                  <div class="col-12">
+                    <label class="sc-label">Allergies / préférences alimentaires</label>
+                    <input type="text" id="f-allergies" class="sc-input" placeholder="Ex: sans gluten, vegan, allergie aux noix…">
+                  </div>
+                </div>
+                <div class="form-note mt-3">
+                  💡 Après envoi, votre commande s'ouvrira dans WhatsApp. N'oubliez pas d'envoyer le message !
+                </div>
+                <div class="form-nav-btns mt-4 d-flex justify-content-between">
+                  <button type="button" class="btn sc-btn-outline" onclick="goStep(2)">← Retour</button>
+                  <button type="button" class="btn sc-btn-whatsapp btn-lg" onclick="sendToWhatsApp()">
+                    📱 Envoyer par WhatsApp
+                  </button>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="sc-footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 mb-3 mb-md-0"><div class="footer-brand">✦ Sister's Creation</div><p class="footer-tagline">Des gourmandises faites avec amour.</p></div>
+        <div class="col-md-4 mb-3 mb-md-0 text-center"><div class="footer-nav"><a href="boutique.html">Boutique</a><a href="commande.html">Commander</a><a href="aide.html">Aide</a></div></div>
+        <div class="col-md-4 text-md-end"><p class="footer-contact">📞 <a href="https://wa.me/50937704927">37 70 49 27</a></p><p class="footer-contact">📍 Carradeux, Haïti</p></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2024 Sister's Creation.</p></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const today = new Date().toISOString().split('T')[0];
+      document.getElementById('f-date').min = today;
+    });
+
+    function goStep(num) {
+      // Validate current step before proceeding
+      if (num > 1) {
+        const currentStep = document.querySelector('.form-step.active');
+        const inputs = currentStep.querySelectorAll('[required]');
+        let valid = true;
+        inputs.forEach(inp => {
+          if (!inp.value.trim()) {
+            inp.classList.add('invalid');
+            valid = false;
+          } else {
+            inp.classList.remove('invalid');
+          }
+        });
+        if (!valid) return;
+      }
+
+      document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.progress-step').forEach((s, i) => {
+        s.classList.toggle('active', i < num);
+        s.classList.toggle('done', i < num - 1);
+      });
+      document.getElementById(`step-${num}`).classList.add('active');
+      document.querySelector('.sc-form-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function sendToWhatsApp() {
+      const idea = document.getElementById('f-idea');
+      if (!idea.value.trim()) { idea.classList.add('invalid'); return; }
+      idea.classList.remove('invalid');
+
+      const name = document.getElementById('f-name').value;
+      const phone = document.getElementById('f-phone').value;
+      const event = document.getElementById('f-event').value;
+      const date = document.getElementById('f-date').value;
+      const guests = document.getElementById('f-guests').value || 'Non précisé';
+      const allergies = document.getElementById('f-allergies').value || 'Aucune';
+      const budget = document.getElementById('f-budget').value ? document.getElementById('f-budget').value + ' HTG' : 'Non précisé';
+      const ideaTxt = idea.value;
+
+      let msg = `*📩 NOUVELLE COMMANDE PERSONNALISÉE - Sister's Creation*\n\n`;
+      msg += `*👤 Nom :* ${name}\n*📞 Téléphone :* ${phone}\n`;
+      msg += `*🎉 Événement :* ${event}\n*📅 Date :* ${date}\n`;
+      msg += `*👥 Personnes :* ${guests}\n*💰 Budget :* ${budget}\n`;
+      msg += `*⚠️ Allergies :* ${allergies}\n\n`;
+      msg += `*💡 Idée :*\n${ideaTxt}\n\n_Merci de confirmer réception_ 🎂`;
+
+      window.open(`https://wa.me/50937704927?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    document.querySelectorAll('.sc-input').forEach(inp => {
+      inp.addEventListener('input', () => inp.classList.remove('invalid'));
+    });
+  </script>
+</body>
+</html>

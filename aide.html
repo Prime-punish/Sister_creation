@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aide – Sister's Creation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sc-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand sc-brand" href="index.html"><span class="brand-icon">✦</span> Sister's Creation</a>
+      <button class="navbar-toggler sc-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="toggler-line"></span><span class="toggler-line"></span><span class="toggler-line"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link sc-nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link sc-nav-link" href="boutique.html">Nos Délices</a></li>
+          <li class="nav-item"><a class="nav-link sc-nav-link" href="commande.html">Sur Mesure</a></li>
+          <li class="nav-item"><a class="nav-link sc-nav-link" href="paiement.html">Paiement</a></li>
+          <li class="nav-item"><a class="nav-link sc-nav-link active" href="aide.html">Aide</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container text-center">
+      <span class="section-tag reveal-up">Support</span>
+      <h1 class="page-title reveal-up delay-1">💬 Centre d'Aide</h1>
+      <p class="page-subtitle reveal-up delay-2">Trouvez des réponses rapides à vos questions.</p>
+    </div>
+  </section>
+
+  <main class="py-5">
+    <div class="container">
+
+      <!-- SEARCH -->
+      <div class="row justify-content-center mb-5 reveal-up">
+        <div class="col-md-6">
+          <div class="search-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="faq-search" class="sc-search" placeholder="Rechercher une question…">
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- SIDEBAR CATEGORIES -->
+        <div class="col-lg-3 reveal-up delay-1">
+          <div class="help-categories">
+            <div class="help-cat active" data-tab="payment">💳 Paiements</div>
+            <div class="help-cat" data-tab="custom">🎂 Commandes perso.</div>
+            <div class="help-cat" data-tab="standard">🍰 Commandes standard</div>
+            <div class="help-cat" data-tab="delivery">🚚 Livraison</div>
+            <div class="help-cat" data-tab="contact">📞 Contact</div>
+          </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="col-lg-9 reveal-up delay-2">
+
+          <!-- PAIEMENTS -->
+          <div class="help-panel active" id="tab-payment">
+            <h2 class="help-panel-title">💳 Paiements</h2>
+            <div class="faq-group">
+              <div class="faq-item">
+                <button class="faq-question" type="button">Quels modes de paiement acceptez-vous ? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">Nous acceptons uniquement <strong>MonCash</strong> (Digicel). Aucun paiement en espèces ou virement bancaire classique n'est accepté pour les commandes en ligne.</div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" type="button">Que faire si mon paiement échoue ? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">Vérifiez d'abord le solde de votre portefeuille MonCash en composant le <code>*202#</code>. Si le problème persiste, contactez le support MonCash au numéro indiqué dans l'application ou réessayez plus tard.</div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" type="button">Puis-je annuler un paiement ? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">Les paiements MonCash ne sont pas annulables une fois validés. Si vous souhaitez annuler votre commande, <strong>contactez-nous immédiatement</strong> via WhatsApp et nous ferons notre possible pour vous aider.</div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" type="button">Comment envoyer la preuve de paiement ? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">Prenez une capture d'écran de la confirmation MonCash et envoyez-la par WhatsApp au <strong>37 70 49 27</strong> avec votre nom et numéro de commande.</div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" type="button">Faut-il payer en totalité à l'avance ? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">Pour les commandes personnalisées, un <strong>acompte de 30%</strong> est requis pour confirmer la commande. Le solde est payé à la livraison. Pour les commandes standards, le paiement intégral est requis.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMMANDES PERSO -->
+          <div class="help-panel" id="tab-custom">
+            <h2 class="help-panel-title">🎂 Commandes Personnalisées</h2>
+            <div class="faq-group">
+              <div class="faq-item">
+                <button class="faq-question" type="button">Quel est le délai pour une commande personnalisée ? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">Il faut un préavis de <strong>3 à 5 jours</strong> selon la complexité. Les créations très élaborées (plusieurs étages, décors complexes) peuvent nécessiter jusqu'à 7 jours.</div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" type="button">Puis-je apporter ma propre image pour le gâteau ? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">Oui ! Nous pouvons imprimer des <strong>images comestibles</strong> sur vos gâteaux. Envoyez l'image en haute résolution (minimum 300 DPI) au moins 4 jours à l'avance via WhatsApp.</div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" type="button">Quels sont les prix pour une commande personnalisée ? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">Les prix commencent à <strong>1 500 HTG</strong> pour une création simple et peuvent aller jusqu'à <strong>5 000 HTG ou plus</strong> pour des pièces élaborées. Un devis vous est fourni après description de votre idée.</div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" type="button">Quelles saveurs proposez-vous ? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">Nous proposons : chocolat, vanille, fraise, noix de coco, citron, et des combinaisons sur demande. Mentionnez vos préférences dans le formulaire de commande.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMMANDES STANDARD -->
+          <div class="help-panel" id="tab-standard">
+            <h2 class="help-panel-title">🍰 Commandes Standards</h2>
+            <div class="faq-group">
+              <div class="faq-item">
+                <button class="faq-question" type="button">Comment commander un délice standard ? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">Parcourez notre <a href="boutique.html">boutique en ligne</a>, cliquez sur "Commander" à côté du produit souhaité. WhatsApp s'ouvrira avec votre commande pré-remplie.</div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" type="button">Puis-je modifier ma commande après paiement ? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">Les modifications ne sont possibles que si la préparation n'a pas encore commencé. <strong>Contactez-nous immédiatement</strong> par téléphone dès que vous souhaitez modifier votre commande.</div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" type="button">Jusqu'à quelle heure puis-je commander ? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">Les commandes standards peuvent être passées jusqu'à <strong>18h la veille</strong> pour une livraison le lendemain. Pour une livraison le jour même, commandez avant <strong>10h du matin</strong>.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- LIVRAISON -->
+          <div class="help-panel" id="tab-delivery">
+            <h2 class="help-panel-title">🚚 Livraison</h2>
+            <div class="faq-group">
+              <div class="faq-item">
+                <button class="faq-question" type="button">Quelles zones sont couvertes par la livraison ? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">Nous livrons dans les zones suivantes : <strong>Delmas, Tabarre, Pétion-Ville, Gérard, Carradeux, Clercine</strong> et <strong>Siloé</strong>. Pour d'autres zones, contactez-nous pour vérifier la faisabilité.</div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" type="button">Y a-t-il des frais de livraison ? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">Les frais de livraison varient selon la zone. Ils vous seront communiqués lors de la confirmation de commande.</div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" type="button">Quel est le délai de livraison ? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">La livraison s'effectue généralement sous <strong>24h après réception du paiement</strong> pour les commandes standards. Pour les créations personnalisées, le délai est de 3 à 5 jours.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTACT -->
+          <div class="help-panel" id="tab-contact">
+            <h2 class="help-panel-title">📞 Contactez-nous</h2>
+            <div class="row g-3 mb-4">
+              <div class="col-sm-4">
+                <div class="contact-chip">
+                  <div class="contact-chip-icon">📧</div>
+                  <h5>Email</h5>
+                  <p>francillonlaurie98@gmail.com</p>
+                  <small>Réponse sous 24h</small>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="contact-chip contact-chip-highlight">
+                  <div class="contact-chip-icon">📱</div>
+                  <h5>WhatsApp</h5>
+                  <p><a href="https://wa.me/50937704927">37 70 49 27</a></p>
+                  <small>Preuves de paiement</small>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="contact-chip">
+                  <div class="contact-chip-icon">📍</div>
+                  <h5>Adresse</h5>
+                  <p>Carradeux, Haïti</p>
+                  <small>Sur commande uniquement</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="sc-form-container">
+              <h3 class="form-title" style="font-size:1.4rem">Envoyer un message</h3>
+              <form id="contact-form">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="sc-label required">Nom complet</label>
+                    <input type="text" id="c-name" class="sc-input" required placeholder="Votre nom">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="sc-label required">Téléphone</label>
+                    <input type="tel" id="c-phone" class="sc-input" required placeholder="Votre numéro">
+                  </div>
+                  <div class="col-12">
+                    <label class="sc-label required">Sujet</label>
+                    <select id="c-subject" class="sc-input" required>
+                      <option value="">Sélectionnez un sujet</option>
+                      <option value="Problème de paiement">Problème de paiement</option>
+                      <option value="Commande personnalisée">Commande personnalisée</option>
+                      <option value="Commande standard">Commande standard</option>
+                      <option value="Problème de livraison">Problème de livraison</option>
+                      <option value="Autre">Autre</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="sc-label required">Message</label>
+                    <textarea id="c-message" class="sc-input" rows="4" required placeholder="Décrivez votre question…"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="button" onclick="sendContact()" class="btn sc-btn-whatsapp w-100">📱 Envoyer via WhatsApp</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="sc-footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 mb-3 mb-md-0"><div class="footer-brand">✦ Sister's Creation</div><p class="footer-tagline">Des gourmandises faites avec amour.</p></div>
+        <div class="col-md-4 mb-3 mb-md-0 text-center"><div class="footer-nav"><a href="boutique.html">Boutique</a><a href="commande.html">Commander</a><a href="aide.html">Aide</a></div></div>
+        <div class="col-md-4 text-md-end"><p class="footer-contact">📞 <a href="https://wa.me/50937704927">37 70 49 27</a></p><p class="footer-contact">📍 Carradeux, Haïti</p></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2024 Sister's Creation.</p></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+    // Tabs
+    document.querySelectorAll('.help-cat').forEach(cat => {
+      cat.addEventListener('click', function() {
+        document.querySelectorAll('.help-cat').forEach(c => c.classList.remove('active'));
+        document.querySelectorAll('.help-panel').forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+        document.getElementById('tab-' + this.dataset.tab).classList.add('active');
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-icon').textContent = '+';
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          this.querySelector('.faq-icon').textContent = '−';
+        }
+      });
+    });
+
+    // Search
+    document.getElementById('faq-search').addEventListener('input', function() {
+      const q = this.value.toLowerCase().trim();
+      if (!q) { document.querySelectorAll('.faq-item').forEach(i => i.style.display = ''); return; }
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.style.display = item.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+      // Activate all panels to show results
+      document.querySelectorAll('.help-panel').forEach(p => p.classList.add('active'));
+    });
+
+    function sendContact() {
+      const name = document.getElementById('c-name').value;
+      const phone = document.getElementById('c-phone').value;
+      const subject = document.getElementById('c-subject').value;
+      const message = document.getElementById('c-message').value;
+      if (!name || !phone || !subject || !message) { alert('⚠️ Veuillez remplir tous les champs.'); return; }
+      const msg = `Bonjour !\n\nJe m'appelle ${name}.\nMon numéro : ${phone}\n\nSujet : ${subject}\n\nMessage :\n${message}`;
+      window.open(`https://wa.me/50937704927?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+  </script>
+</body>
+</html>

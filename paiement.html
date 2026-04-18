@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paiement – Sister's Creation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sc-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand sc-brand" href="index.html"><span class="brand-icon">✦</span> Sister's Creation</a>
+      <button class="navbar-toggler sc-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="toggler-line"></span><span class="toggler-line"></span><span class="toggler-line"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link sc-nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link sc-nav-link" href="boutique.html">Nos Délices</a></li>
+          <li class="nav-item"><a class="nav-link sc-nav-link" href="commande.html">Sur Mesure</a></li>
+          <li class="nav-item"><a class="nav-link sc-nav-link active" href="paiement.html">Paiement</a></li>
+          <li class="nav-item"><a class="nav-link sc-nav-link" href="aide.html">Aide</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container text-center">
+      <span class="section-tag reveal-up">Simple & Sécurisé</span>
+      <h1 class="page-title reveal-up delay-1">💳 Comment payer ?</h1>
+      <p class="page-subtitle reveal-up delay-2">Uniquement via MonCash après confirmation de commande.</p>
+    </div>
+  </section>
+
+  <main class="py-5">
+    <div class="container">
+
+      <!-- ALERT -->
+      <div class="sc-alert reveal-up mb-5">
+        <div class="sc-alert-icon">⚠️</div>
+        <div>
+          <strong>Important :</strong> Aucun paiement en ligne n'est accepté sur ce site. Tous les paiements se font <strong>uniquement via MonCash</strong> après confirmation de commande sur WhatsApp.
+        </div>
+      </div>
+
+      <!-- TIMELINE STEPS -->
+      <div class="payment-timeline">
+
+        <div class="pay-step reveal-up delay-1">
+          <div class="pay-step-num">1</div>
+          <div class="pay-step-body">
+            <h3>Recevez votre confirmation</h3>
+            <p>Après avoir passé commande via WhatsApp, nous vous envoyons :</p>
+            <div class="row g-3 mt-2">
+              <div class="col-sm-6">
+                <div class="pay-info-chip">📋 Détail de la commande</div>
+              </div>
+              <div class="col-sm-6">
+                <div class="pay-info-chip">💰 Montant total</div>
+              </div>
+              <div class="col-sm-6">
+                <div class="pay-info-chip">📱 Numéro MonCash</div>
+              </div>
+              <div class="col-sm-6">
+                <div class="pay-info-chip">📝 Instructions</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pay-connector"></div>
+
+        <div class="pay-step reveal-up delay-2">
+          <div class="pay-step-num">2</div>
+          <div class="pay-step-body">
+            <h3>Effectuez le paiement MonCash</h3>
+            <div class="moncash-card">
+              <div class="moncash-header">
+                <span class="moncash-logo">📱</span>
+                <div>
+                  <h4>MonCash <span class="badge-digicel">Digicel</span></h4>
+                  <p class="mb-0">Paiement mobile rapide et sécurisé</p>
+                </div>
+              </div>
+              <div class="moncash-details">
+                <div class="mc-detail-row">
+                  <span>Nom :</span><strong>Laurie Francillon</strong>
+                </div>
+                <div class="mc-detail-row">
+                  <span>Numéro :</span><strong>37 70 49 27</strong>
+                </div>
+              </div>
+              <div class="ussd-display">
+                <span class="ussd-label">Code USSD</span>
+                <div class="ussd-code-big">*202#</div>
+                <div class="d-flex gap-2 flex-wrap justify-content-center mt-3">
+                  <a href="tel:*202%23" class="btn sc-btn-primary">📞 Composer</a>
+                  <button onclick="copyUSSD()" class="btn sc-btn-outline">📋 Copier</button>
+                </div>
+              </div>
+              <div class="ussd-instructions">
+                <p class="mb-2"><strong>Instructions manuelles :</strong></p>
+                <ol class="mb-0">
+                  <li>Ouvrez votre clavier téléphonique</li>
+                  <li>Tapez <code>*202#</code> et appuyez sur "Appeler"</li>
+                  <li>Sélectionnez "Paiement"</li>
+                  <li>Entrez le numéro et le montant</li>
+                  <li>Confirmez avec votre code PIN</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pay-connector"></div>
+
+        <div class="pay-step reveal-up delay-3">
+          <div class="pay-step-num">3</div>
+          <div class="pay-step-body">
+            <h3>Envoyez la preuve de paiement</h3>
+            <p>Prenez une <strong>capture d'écran</strong> de la confirmation MonCash et envoyez-la par WhatsApp.</p>
+            <div class="text-center mt-3">
+              <a href="https://wa.me/50937704927?text=Bonjour,%20voici%20ma%20preuve%20de%20paiement%20:" class="btn sc-btn-whatsapp btn-lg" target="_blank">
+                📩 Envoyer la preuve via WhatsApp
+              </a>
+            </div>
+            <p class="text-center mt-2" style="font-size:0.85rem; opacity:0.7;">Le lien ouvre WhatsApp avec un message pré-rempli</p>
+          </div>
+        </div>
+
+        <div class="pay-connector"></div>
+
+        <div class="pay-step pay-step-success reveal-up delay-4">
+          <div class="pay-step-num pay-step-num-success">✓</div>
+          <div class="pay-step-body">
+            <h3>Confirmation & Livraison</h3>
+            <p>Votre commande est confirmée après réception de la preuve. Nous envoyons un message de confirmation avec les détails de livraison.</p>
+            <div class="success-badge">⏳ Traitement sous 24h après réception du paiement</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- TOAST -->
+  <div class="sc-toast" id="scToast">✅ Code *202# copié dans le presse-papiers !</div>
+
+  <footer class="sc-footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 mb-3 mb-md-0"><div class="footer-brand">✦ Sister's Creation</div><p class="footer-tagline">Des gourmandises faites avec amour.</p></div>
+        <div class="col-md-4 mb-3 mb-md-0 text-center"><div class="footer-nav"><a href="boutique.html">Boutique</a><a href="commande.html">Commander</a><a href="aide.html">Aide</a></div></div>
+        <div class="col-md-4 text-md-end"><p class="footer-contact">📞 <a href="https://wa.me/50937704927">37 70 49 27</a></p><p class="footer-contact">📍 Carradeux, Haïti</p></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2024 Sister's Creation.</p></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+    function copyUSSD() {
+      navigator.clipboard.writeText('*202#').catch(() => {
+        const ta = document.createElement('textarea');
+        ta.value = '*202#';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      });
+      const toast = document.getElementById('scToast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+  </script>
+</body>
+</html>
